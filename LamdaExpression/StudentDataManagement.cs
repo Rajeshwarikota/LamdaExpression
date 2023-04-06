@@ -14,5 +14,12 @@ namespace LamdaExpression
             List<Student> teenagestudents = students.Where(s =>s.Age >=12 && s.Age <=18).ToList();
             Program.DisplayStudentDetails(teenagestudents);
         }
+
+        public static void SortDataInDescendingOrder(List<Student> students)
+        {
+            Console.WriteLine("\n Sorting the Data in Age");
+            List<Student> SortedData = students.OrderByDescending(s => s.Age).ToList();
+            Program.DisplayStudentDetails(SortedData);
+        }
     }
 }
