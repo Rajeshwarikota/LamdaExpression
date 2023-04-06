@@ -26,6 +26,7 @@ namespace LamdaExpression
             StudentDataManagement.FindTeenageStudents(list);
             StudentDataManagement.SortDataInDescendingOrder(list);
             StudentDataManagement.DisplayEachAddressOfStudent(list);
+            StudentDataManagement.FetchFirstThreeStudents(list);
             Console.ReadLine();
         }
         public static void DisplayStudentDetails(List<Student> list)

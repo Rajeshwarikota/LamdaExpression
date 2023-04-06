@@ -22,11 +22,17 @@ namespace LamdaExpression
             Program.DisplayStudentDetails(SortedData);
         }
 
-        public static void DisplayEachAddressOfStudent(List<Student> students)
+        public static void DisplayEachAddressOfStudent(List<Student> list)
         {
             Console.WriteLine("\n Address of Each Student");
-            List<Student>  address = students.OrderBy(s => s.Address).ToList();
+            List<Student>  address = list.OrderBy(s => s.Address).ToList();
             Program.DisplayStudentDetails(address);
+        }
+        public static void FetchFirstThreeStudents(List<Student> list)
+        {
+            Console.WriteLine("\n Fetching First Three Students Fom Records");
+            var top = list.Take(3).ToList();
+            Program.DisplayStudentDetails(top);
         }
     }
 }
