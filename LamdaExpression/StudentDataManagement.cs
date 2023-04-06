@@ -25,7 +25,7 @@ namespace LamdaExpression
         public static void DisplayEachAddressOfStudent(List<Student> list)
         {
             Console.WriteLine("\n Address of Each Student");
-            List<Student>  address = list.OrderBy(s => s.Address).ToList();
+            var  address = list.OrderBy(s => s.Address).ToList();
             Program.DisplayStudentDetails(address);
         }
         public static void FetchFirstThreeStudents(List<Student> list)
@@ -33,6 +33,13 @@ namespace LamdaExpression
             Console.WriteLine("\n Fetching First Three Students Fom Records");
             var top = list.Take(3).ToList();
             Program.DisplayStudentDetails(top);
+        }
+        public static void FetchLastThreeStudents(List<Student> list)
+        {
+            Console.WriteLine("\n Fetching last Three Students Fom Records");
+            list.Reverse();
+            var last = list.Take(3).ToList();
+            Program.DisplayStudentDetails(last);
         }
     }
 }
