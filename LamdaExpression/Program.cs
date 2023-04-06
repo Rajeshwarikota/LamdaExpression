@@ -11,7 +11,27 @@ namespace LamdaExpression
         static void Main(string[] args)
         {
             Console.WriteLine("....Lamda Expression....");
+
+            //Collection initializer
+            List<Student> list = new List<Student>()
+            {
+                //object initializer
+                new Student(){Id=1,Name="Raji",Age=22,Address="Hyderabad",PhoneNumber=9988776655},
+                new Student(){Id=2,Name="Ammu",Age=21,Address="chennai",PhoneNumber=9988776657},
+                new Student(){Id=3,Name="Neetha",Age=32,Address="Bangalore",PhoneNumber=9988775655},
+                new Student(){Id=4,Name="Nithya",Age=25,Address="vizag",PhoneNumber=9988775655},
+                new Student(){Id=5,Name="Teja",Age=23,Address="mumbai",PhoneNumber=9988776345},
+            };
+            DisplayStudentDetails(list);
             Console.ReadLine();
+        }
+        public static void DisplayStudentDetails(List<Student> list)
+        {
+            Console.WriteLine("Displaying All Students");
+            foreach(Student student in list)
+            {
+                Console.WriteLine(student);
+            }
         }
     }
 }
