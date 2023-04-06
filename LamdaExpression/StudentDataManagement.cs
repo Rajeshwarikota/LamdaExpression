@@ -21,5 +21,12 @@ namespace LamdaExpression
             List<Student> SortedData = students.OrderByDescending(s => s.Age).ToList();
             Program.DisplayStudentDetails(SortedData);
         }
+
+        public static void DisplayEachAddressOfStudent(List<Student> students)
+        {
+            Console.WriteLine("\n Address of Each Student");
+            List<Student>  address = students.OrderBy(s => s.Address).ToList();
+            Program.DisplayStudentDetails(address);
+        }
     }
 }
